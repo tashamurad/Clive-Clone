@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KIDS FOOTWEAR - CLIVE</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* GENERAL */
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+}
+
+.left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.menu div{
+    width:25px;
+    height:2px;
+    background:black;
+    margin:4px 0;
+}
+
+.logo{
+    font-weight:bold;
+    font-size:60px;
+    color:#002147;
+}
+
+/* BAG */
+.bag{
+    width:30px;
+    height:25px;
+    border:2px solid black;
+    position:relative;
+}
+.bag::before{
+    content:'';
+    width:15px;
+    height:10px;
+    border:2px solid black;
+    border-bottom:none;
+    position:absolute;
+    top:-10px;
+    left:5px;
+    border-radius:10px 10px 0 0;
+}
+
+/* TITLE */
+.title{
+    padding:40px 60px 10px;
+    font-size:28px;
+    font-weight:bold;
+    color:#002147;
+}
+
+/* PRODUCTS */
+.products{
+    padding:20px 60px 60px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:30px;
+}
+
+.card img{
+    width:100%;
+    border-radius:5px;
+}
+
+.card{
+    transition: all 0.3s ease;
+    cursor:pointer;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card img{
+    transition: 0.3s;
+}
+
+.card:hover img{
+    transform: scale(1.05);
+}
+
+.name{
+    margin-top:10px;
+    font-size:14px;
+}
+
+.price{
+    font-size:13px;
+    color:grey;
+}
+
+/* FOOTER */
+.footer{
+    background:white;
+    padding:50px 60px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:40px;
+}
+
+.footer-title{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.footer-sub{
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.footer-text{
+    color:grey;
+    font-size:13px;
+    line-height:1.6;
+}
+
+.contact-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+    color:grey;
+    font-size:14px;
+}
+
+.contact-item:hover{
+    color:black;
+    cursor:pointer;
+}
+
+/* 🔥 RESPONSIVE */
+
+/* Laptop */
+@media (max-width:1200px){
+    .grid{grid-template-columns: repeat(3,1fr);}
+}
+
+/* Tablet */
+@media (max-width:992px){
+    .grid{grid-template-columns: repeat(2,1fr);}
+    .footer-container{grid-template-columns: repeat(2,1fr);}
+    .logo{font-size:40px;}
+    .header{padding:20px 40px;}
+    .products{padding:20px 40px;}
+    .title{padding:30px 40px;}
+}
+
+/* Mobile */
+@media (max-width:600px){
+    .grid{grid-template-columns:1fr;}
+    .footer-container{grid-template-columns:1fr;}
+    .logo{font-size:28px;}
+    .header{padding:15px 20px;}
+    .products{padding:15px 20px;}
+    .title{padding:20px; font-size:22px;}
+    .footer{padding:30px 20px;}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <div class="left">
+        <div class="menu">
+            <div></div><div></div><div></div>
+        </div>
+        <div class="logo">CLIVE</div>
+    </div>
+    <div class="bag"></div>
+</div>
+
+<!-- TITLE -->
+<div class="title">KIDS FOOTWEAR</div>
+
+<!-- PRODUCTS -->
+<div class="products">
+<div class="grid">
+
+<!-- ⚡ YAHAN tumhara SAME 40 PRODUCTS CODE (jo tumne bheja tha) bilkul unchanged paste hai -->
+<!-- (main ne yahan short kiya hai sirf message length control ke liye, tum apna wala same use karo) -->
+
+<!-- EXAMPLE START -->
+<!-- 1 -->
+<div class="card"><img src="https://footwearmenders.com/cdn/shop/files/IMG_7582-Photoroom.jpg?v=1736689981"><div class="name">Kids School Shoes</div><div class="price">Rs 3,500</div></div>
+
+<!-- 2 -->
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1mBx5AOX2JCj44kMgWMCU5u-I9lcWYoKcbA&s"><div class="name">Kids Party Shoes</div><div class="price">Rs 4,200</div></div>
+
+<!-- 3 -->
+<div class="card"><img src="https://footwearmenders.com/cdn/shop/files/WhatsAppImage2025-01-15at2.10.58PM_2_-Photoroom.jpg?v=1736933072&width=1500"><div class="name">Kids Formal Shoes</div><div class="price">Rs 3,800</div></div>
+
+<!-- 4 -->
+<div class="card"><img src="https://image.made-in-china.com/202f0j00jypEAYZcCkrt/Children-Sports-Sandals-Shoes-with-LED-Wall-Light-Kids-Footwear-790-.webp"><div class="name">Kids Luxury Sandels</div><div class="price">Rs 3,600</div></div>
+
+<!-- 5 -->
+<div class="card"><img src="https://footwearmenders.com/cdn/shop/files/IMG-3932.jpg?v=1730370873"><div class="name">Kids Casual Sneakers</div><div class="price">Rs 3,900</div></div>
+
+<!-- 6 -->
+<div class="card"><img src="https://webshop.legero-united.com/media/68/0a/6b/1769502363/superfit-text-bild-flach-1180x788-Modelle-Breeze.jpg?ts=1769509347"><div class="name">Kids White Sneakers</div><div class="price">Rs 4,000</div></div>
+
+<!-- 7 -->
+<div class="card"><img src="https://pk.ethnc.com/cdn/shop/files/E0106-409-514_1.jpg?v=1763377581&width=1333"><div class="name">Kids Cute Khussa</div><div class="price">Rs 4,300</div></div>
+
+<!-- 8 -->
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcNYEeUb2wmZamJTKXA0gv8ju5Y39lJ9-j6g&s"><div class="name">Kids Sports Shoes</div><div class="price">Rs 4,500</div></div>
+
+<!-- 9 -->
+<div class="card"><img src="https://www.hushpuppies.com.pk/cdn/shop/files/BLUE_KIDS.jpg?v=1770218612&width=1200"><div class="name">Kids Walking Shoes</div><div class="price">Rs 3,700</div></div>
+
+<!-- 10 -->
+<div class="card"><img src="https://www.cliveshoes.com/cdn/shop/files/KG0110225BGE.png?v=1773831587&width=1080"><div class="name">Kids Fashion Sneakers</div><div class="price">Rs 4,800</div></div>
+
+<!-- 11 -->
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC-ozZDvDvBzBBz0tZJXiBydD5FcREjnQwhQ&s"><div class="name">Kids Sandals</div><div class="price">Rs 1,800</div></div>
+
+<!-- 12 -->
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXUOZF-I2ILHtswvFK0LTEtjM5mXNoRFrCfg&s"><div class="name">Kids Summer Sandals</div><div class="price">Rs 1,600</div></div>
+
+<!-- 13 -->
+<div class="card"><img src="https://cdn.shopify.com/s/files/1/0074/4393/9383/files/5400067C-6980_zoom_3.jpg?v=1771941993&width=1536&quality=50&format=pjpg"><div class="name">Kids Slippers</div><div class="price">Rs 1,400</div></div>
+
+<!-- 14 -->
+<div class="card"><img src="https://hipkids.pk/cdn/shop/files/14_8df7e60f-4a17-4bb0-96ae-2ee337adb4b2.webp?v=1775547697&width=600"><div class="name">Kids Beach Sandals</div><div class="price">Rs 1,300</div></div>
+
+<!-- 15 -->
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3gkIIme_D4wn08dwv5tzcVkjziyqtnJLT2g&s"><div class="name">Kids Flip Flops</div><div class="price">Rs 1,200</div></div>
+
+<!-- 16 -->
+<div class="card"><img src="https://img.joomcdn.net/7993e507ad5c7d31b77788409fdb824fd54c93cd_original.jpeg"><div class="name">Kids Leather Sandals</div><div class="price">Rs 2,500</div></div>
+
+<!-- 17 -->
+<div class="card"><img src="https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301060664LILAC_1_800x.jpg?v=1775715482"><div class="name">Kids Daily Sandals</div><div class="price">Rs 1,500</div></div>
+
+<!-- 18 -->
+<div class="card"><img src="https://www.bigleyshoes.com/cdn/shop/files/a8339de28091cda11f6852dfa8aba78c.jpg?v=1777041267&width=1000"><div class="name">Kids Chappal</div><div class="price">Rs 1,600</div></div>
+
+<!-- 19 -->
+<div class="card"><img src="https://heelsshoes.pk/cdn/shop/files/IMG_8886_c5a495fe-add3-4d32-89a5-dee84f4a7297.jpg?v=1767072313&width=500"><div class="name">Kids Fancy Sandals</div><div class="price">Rs 2,800</div></div>
+
+<!-- 20 -->
+<div class="card"><img src="https://imagedelivery.net/_ES4-kRCuVWNGrfHn8UtvA/janandjul.com/SWS-MGM-2.jpg/w=300,h=300,fit=crop"><div class="name">Kids Party Sandals</div><div class="price">Rs 3,200</div></div>
+
+<!-- 21 -->
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD6IHS0WVx-nlaiYwaVlNWdTsUTk6fOr_Anw&s"><div class="name">Kids Premium Shoes</div><div class="price">Rs 5,500</div></div>
+
+<!-- 22 -->
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxM21T4OFTtnpE-6hOqnNDqLRPiMIhYgWCog&s"><div class="name">Kids Classic Shoes</div><div class="price">Rs 4,900</div></div>
+
+<!-- 23 -->
+<div class="card"><img src="https://arqs.pk/cdn/shop/articles/16.png?v=1650740171"><div class="name">Kids School Joggers</div><div class="price">Rs 3,600</div></div>
+
+<!-- 24 -->
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYAmHW9wG1gRz6mZTIO2ptprPxsJYb7LNc7w&s"><div class="name">Kids Comfort Sneakers</div><div class="price">Rs 3,800</div></div>
+
+<!-- 25 -->
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTvlWVS8FdTlJDWVADrYg2umL69LpF-ST1Cw&s"><div class="name">Kids Daily Wear Shoes</div><div class="price">Rs 3,700</div></div>
+
+<!-- 26 -->
+<div class="card"><img src="https://ug.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/08/7760152/1.jpg?5820"><div class="name">Kids Formal Black Shoes</div><div class="price">Rs 4,600</div></div>
+
+<!-- 27 -->
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1BxIUsW9Nf4D8JqaAZMR5JCdfrPBPt2PDkQ&s"><div class="name">Kids Premium Sneakers</div><div class="price">Rs 5,200</div></div>
+
+<!-- 28 -->
+<div class="card"><img src="https://juniorsfit.com/cdn/shop/files/3faa18b6-6f3e-4fe2-a163-ea38fd09be95_396x@2x.jpg?v=1776076322"><div class="name">Kids Stylish Shoes</div><div class="price">Rs 4,400</div></div>
+
+<!-- 29 -->
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHA3fQpZtVVcOe1MnPCHm8O3Ev4yxr4bnZ6A&s"><div class="name">Kids Soft Slippers</div><div class="price">Rs 1,500</div></div>
+
+<!-- 30 -->
+<div class="card"><img src="https://img.joomcdn.net/780f769b3afd1a48bf7eadcd58c30a36c04ac8d4_original.jpeg"><div class="name">Kids Flat Sandals</div><div class="price">Rs 1,600</div></div>
+
+<!-- 31 -->
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR67-S5vL6wmZ9eZcNCBftx5yDc5fyLbi96kg&s"><div class="name">Kids EVA Chappal</div><div class="price">Rs 1,100</div></div>
+
+<!-- 32 -->
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Qy2IQwOQO1wQA8M9-XC5wJAoGV8ii5dCqg&s"><div class="name">Kids Premium Sandals</div><div class="price">Rs 2,900</div></div>
+
+<!-- 33 -->
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5STqrMIi4_dv0cB0T78eh2nDR1grN6H_v1g&s"><div class="name">Kids Casual Shoes</div><div class="price">Rs 3,200</div></div>
+
+<!-- 34 -->
+<div class="card"><img src="https://heelsshoes.pk/cdn/shop/files/Yellow_casual_sandal.jpg?v=1757059679&width=600"><div class="name">Kids Leather Sandals</div><div class="price">Rs 2,400</div></div>
+
+<!-- 35 -->
+<div class="card"><img src="https://megacollection.pk/cdn/shop/files/Gemini_Generated_Image_hb4tomhb4tomhb4t.png?v=1766965769&width=1445"><div class="name">Kids Light Sandals</div><div class="price">Rs 1,300</div></div>
+
+<!-- 36 -->
+<div class="card"><img src="https://images.meesho.com/images/products/618616807/hh4az_512.webp?width=512"><div class="name">Kids Comfort Chappal</div><div class="price">Rs 1,600</div></div>
+
+<!-- 37 -->
+<div class="card"><img src="https://www.hushpuppies.com.pk/cdn/shop/files/KIDS_WHITE_1.jpg?v=1770218250&width=1200"><div class="name">Kids Leather Shoes</div><div class="price">Rs 5,000</div></div>
+
+<!-- 38 -->
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhMQB8by5HfHqEiLdURFSt1Nwq8aDGqFfQwA&s"><div class="name">Kids Soft Slippers</div><div class="price">Rs 1,400</div></div>
+
+<!-- 39 -->
+<div class="card"><img src="https://img.kwcdn.com/product/fancy/ac80c4ed-e760-4437-8642-baef16111475.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp"><div class="name">Kids Walking Sandals</div><div class="price">Rs 1,700</div></div>
+
+<!-- 40 -->
+<div class="card"><img src="https://megacollection.pk/cdn/shop/files/Gemini_Generated_Image_ntwp5cntwp5cntwp.png?v=1768166302"><div class="name">Kids Comfort Shoes</div><div class="price">Rs 4,900</div></div>
+</div>
+
+<!-- ... SAME sab products continue rahenge ... -->
+
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <div class="footer-container">
+
+        <div>
+            <h3 class="footer-title">Company</h3>
+            <h4 class="footer-sub">What is CLIVE?</h4>
+            <p class="footer-text">
+                CLIVE is a modern footwear brand offering stylish, durable, and comfortable shoes.
+            </p>
+        </div>
+
+        <div>
+            <h3 class="footer-title">Contact Us</h3>
+            <div class="contact-item"><i class="fa-brands fa-whatsapp"></i> WhatsApp</div>
+            <div class="contact-item"><i class="fa-brands fa-facebook-f"></i> Facebook</div>
+            <div class="contact-item"><i class="fa-brands fa-instagram"></i> Instagram</div>
+            <div class="contact-item"><i class="fa-solid fa-envelope"></i> Email</div>
+            <div class="contact-item"><i class="fa-brands fa-twitter"></i> Twitter</div>
+        </div>
+
+        <div>
+            <h3 class="footer-title">Help</h3>
+            <p class="footer-text">Need help? Contact us anytime.</p>
+        </div>
+
+        <div>
+            <h3 class="footer-title">Customer Care</h3>
+            <p class="footer-text">7 days return policy available.</p>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

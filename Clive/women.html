@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WOMEN FOOTWEAR - CLIVE</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* GENERAL */
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+}
+
+.left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.menu div{
+    width:25px;
+    height:2px;
+    background:black;
+    margin:4px 0;
+}
+
+.logo{
+    font-weight:bold;
+    font-size:60px;
+    color:#002147;
+}
+
+/* BAG */
+.bag{
+    width:30px;
+    height:25px;
+    border:2px solid black;
+    position:relative;
+}
+.bag::before{
+    content:'';
+    width:15px;
+    height:10px;
+    border:2px solid black;
+    border-bottom:none;
+    position:absolute;
+    top:-10px;
+    left:5px;
+    border-radius:10px 10px 0 0;
+}
+
+/* TITLE */
+.title{
+    padding:40px 60px 10px;
+    font-size:28px;
+    font-weight:bold;
+    color:#002147;
+}
+
+/* PRODUCTS */
+.products{
+    padding:20px 60px 60px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:30px;
+}
+
+.card img{
+    width:100%;
+    border-radius:5px;
+}
+
+.card{
+    transition: all 0.3s ease;
+    cursor:pointer;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card img{
+    transition: 0.3s;
+}
+
+.card:hover img{
+    transform: scale(1.05);
+}
+
+.name{
+    margin-top:10px;
+    font-size:14px;
+}
+
+.price{
+    font-size:13px;
+    color:grey;
+}
+
+/* FOOTER */
+.footer{
+    background:white;
+    padding:50px 60px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:40px;
+}
+
+.footer-title{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.footer-sub{
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.footer-text{
+    color:grey;
+    font-size:13px;
+    line-height:1.6;
+}
+
+.contact-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+    color:grey;
+    font-size:14px;
+}
+
+.contact-item:hover{
+    color:black;
+    cursor:pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px){
+    .grid{grid-template-columns: repeat(2, 1fr);}
+    .footer-container{grid-template-columns: repeat(2, 1fr);}
+    .logo{font-size:40px;}
+}
+
+@media (max-width: 600px){
+    .grid{grid-template-columns: 1fr;}
+    .footer-container{grid-template-columns: 1fr;}
+    .logo{font-size:28px;}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <div class="left">
+        <div class="menu">
+            <div></div><div></div><div></div>
+        </div>
+        <div class="logo">CLIVE</div>
+    </div>
+    <div class="bag"></div>
+</div>
+
+<!-- TITLE -->
+<div class="title">WOMEN FOOTWEAR</div>
+
+<!-- PRODUCTS -->
+<div class="products">
+<div class="grid">
+
+<!-- SHOES SECTION -->
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ89pojfUCcCIoaNIs1k8hSTj_GPw2HYyH_Rg&s"><div class="name">Elegant Heels</div><div class="price">Rs 5,500</div></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_eB2UKGpMcWoL_-TsUHjQNhwhAfuXkL-9bA&s"><div class="name">Stylish Pumps</div><div class="price">Rs 4,800</div></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf2K-PMD3hu-FmXivYvLlReyvl5T5OttR4pg&s"><div class="name">Party Heels</div><div class="price">Rs 6,200</div></div>
+<div class="card"><img src="https://sowears.net/cdn/shop/files/Untitled_design_2_600x.jpg?v=1752476120"><div class="name">Casual Sneakers</div><div class="price">Rs 3,900</div></div>
+
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIAzkwsaYBZgzISprwAxxhK8ANaA9X3dAhIw&s"><div class="name">White Trainers</div><div class="price">Rs 4,200</div></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4VmKQdRMnOpniS6V4kO-poavzZWPxymc1qQ&s"><div class="name">Running Shoes</div><div class="price">Rs 4,600</div></div>
+<div class="card"><img src="https://www.aldoshoes.in/on/demandware.static/-/Sites-aldo_master_catalog/default/dwa09ca1c1/large/larosea-in110029_1.jpg"><div class="name">Fashion Sneakers</div><div class="price">Rs 4,100</div></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBrW6981gJCl4HlLg8FI-8NxiKH1Z5GlrHCg&s"><div class="name">Comfort Walk Shoes</div><div class="price">Rs 3,800</div></div>
+
+<!-- MORE SHOES -->
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuTQbdP1JLk_qCm9zSHixneow08ptr1DsUDA&s"><div class="name">Daily Wear Shoes</div><div class="price">Rs 3,500</div></div>
+<div class="card"><img src="https://pumpitup.pk/cdn/shop/files/Dazzling_Gold_Glow_Block_Heel_Sandal_PIU_267-5.webp?v=1777015819&width=1200"><div class="name">Premium Heels</div><div class="price">Rs 6,800</div></div>
+<div class="card"><img src="https://unze.com.pk/cdn/shop/files/l42925.jpg?v=1777457035"><div class="name">Office Pumps</div><div class="price">Rs 5,300</div></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlftmw-GfVr2A_ZUM9CVKpPSXlTV7PhEiBnQ&s"><div class="name">Street Sneakers</div><div class="price">Rs 4,000</div></div>
+
+<!-- SANDALS / CHAPPAL SECTION -->
+<div class="card"><img src="https://img.drz.lazcdn.com/g/kf/S79c4095581854748a9f398102d08a3caL.jpg_720x720q80.jpg"><div class="name">Soft Sandals</div><div class="price">Rs 1,800</div></div>
+<div class="card"><img src="https://www.stepmov.com/cdn/shop/products/1_3_dbad81c8-0b5c-4c8f-9bf6-b8e46d1b38c5.jpg?v=1744284426"><div class="name">Summer Flats</div><div class="price">Rs 1,600</div></div>
+<div class="card"><img src="https://www.hushpuppies.com.pk/cdn/shop/files/SLIPPER_BEIGE_COMFORT.jpg?v=1770646081&width=1200"><div class="name">Comfort Slippers</div><div class="price">Rs 1,400</div></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqVLhTbilAU7NbqOqSuG94nXmE1AuA-YrYlg&s"><div class="name">Beach Sandals</div><div class="price">Rs 1,300</div></div>
+
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTulTpY83p5vsuPm47gBdZj-59RZxXhnG0NcQ&s"><div class="name">Soft Flip Flops</div><div class="price">Rs 1,200</div></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI9KbypQ6oOAHTYOdJUsAMmGOIozSm0CBrUQ&s"><div class="name">Leather Flats</div><div class="price">Rs 2,900</div></div>
+<div class="card"><img src="https://eckofit.com/cdn/shop/files/zinc_slippers_for_women.png?v=1748338066&width=600"><div class="name">Daily Sandals</div><div class="price">Rs 1,500</div></div>
+<div class="card"><img src="https://footwearmenders.com/cdn/shop/files/IMG_0079-Photoroom-Photoroom-Photoroom.jpg?v=1746114975&width=1500"><div class="name">Soft Comfort Chappal</div><div class="price">Rs 1,700</div></div>
+
+<!-- EXTRA WOMEN FOOTWEAR -->
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLnL27ZDsfU8HH-B5qjvQo5PXxy2JlBD3vDA&s"><div class="name">Elegant Heeled Sandals</div><div class="price">Rs 3,200</div></div>
+<div class="card"><img src="https://img.drz.lazcdn.com/g/kf/S9bafeb9608be472dbcd07a0d6c43cc85v.jpg_960x960q80.jpg_.webp"><div class="name">Party Sandals</div><div class="price">Rs 3,800</div></div>
+<div class="card"><img src="https://ufstore.pk/cdn/shop/files/63_4556a340-c5e5-450b-8dbc-983dca0db794.jpg?v=1717337527"><div class="name">Luxury Heels</div><div class="price">Rs 7,000</div></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWIexOlNPTbnyWB7sqsaL8gsafcOgHNrkQDA&s"><div class="name">Classic Women Shoes</div><div class="price">Rs 5,900</div></div>
+<!-- 1 -->
+<div class="card">
+<img src="https://www.shopelegancia.com/cdn/shop/files/746F7D83-A991-4DB8-9597-82317FF2AEEC.png?v=1772638804&width=3375">
+<div class="name">Elegant High Heels</div>
+<div class="price">Rs 5,500</div>
+</div>
+
+<!-- 2 -->
+<div class="card">
+<img src="https://www.shoetree.io/cdn/shop/files/DSC_2266_78e7a330-644e-48b2-9f92-96a0ee78cf8a.jpg?v=1776938328&width=533">
+<div class="name">Party Wear Heels</div>
+<div class="price">Rs 6,200</div>
+</div>
+
+<!-- 3 -->
+<div class="card">
+<img src="https://www.julke.pk/cdn/shop/products/Blaire-women-heels-sandals-black-glitter-threequarterview-JULKE_23183d20-7ee2-44bb-9d6d-20e1e9cdb67b.jpg?v=1678864203&width=2048">
+<div class="name">Classic Pumps</div>
+<div class="price">Rs 4,800</div>
+</div>
+
+<!-- 4 -->
+<div class="card">
+<img src="https://bravomoda.eu/10405-large_default/gold-sandals-made-of-natural-leather-with-a-decorative-bow-on-a-stable-heel.jpg">
+<div class="name">Office Heels</div>
+<div class="price">Rs 5,300</div>
+</div>
+
+<!-- 5 -->
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB-zPdApeLWoE795qPNKmfgw6H1NsG9-aCuw&s">
+<div class="name">Party Wear Heels</div>
+<div class="price">Rs 3,900</div>
+</div>
+
+<!-- 6 -->
+<div class="card">
+<img src="https://www.shoetree.io/cdn/shop/files/PR-909D-161_Black_1_3c6eae68-4fce-4e60-b45d-80de05e45602.jpg?v=1768584490&width=533">
+<div class="name">Classic Heels</div>
+<div class="price">Rs 4,200</div>
+</div>
+
+<!-- 7 -->
+<div class="card">
+<img src="https://www.borjan.com.pk/cdn/shop/files/1_fc15ffda-d02c-45e9-a117-f0fcf94dbc2c.jpg?v=1761909726">
+<div class="name">Running Shoes Women</div>
+<div class="price">Rs 4,600</div>
+</div>
+
+<!-- 8 -->
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAxFLBFhtIinfYTSkoKRuCdZTjvssJCzT90Q&s">
+<div class="name">Gym Sneakers</div>
+<div class="price">Rs 4,500</div>
+</div>
+
+<!-- 9 -->
+<div class="card">
+<img src="https://stylo.pk/cdn/shop/files/AT7491-09.jpg?v=1767955702">
+<div class="name">Street Style Sneakers</div>
+<div class="price">Rs 4,000</div>
+</div>
+
+<!-- 10 -->
+<div class="card">
+<img src="https://servis.pk/cdn/shop/products/L-AC-0100049_2_fa11d411-14b7-4d1a-8a09-1ca889323940.jpg?v=1756671287">
+<div class="name">Premium Fashion Sneakers</div>
+<div class="price">Rs 5,800</div>
+</div>
+
+<!-- 11 -->
+<div class="card">
+<img src="https://www.julke.pk/cdn/shop/files/Capri-women-leather-comfort-shoes-midnight-blue-straps-softsole-three-quarter-view-JULKE.jpg?v=1695711278&width=2048">
+<div class="name">Soft Sandals</div>
+<div class="price">Rs 1,800</div>
+</div>
+
+<!-- 12 -->
+<div class="card">
+<img src="https://servis.pk/cdn/shop/files/L-EK-0300693_BLACK_ai.jpg?v=1772089089&width=533">
+<div class="name">Summer Flats</div>
+<div class="price">Rs 1,600</div>
+</div>
+
+<!-- 13 -->
+<div class="card">
+<img src="https://sensationfootwear.com/cdn/shop/files/image_5_c5bb3af7-0f72-4ee8-acc4-cae534d58fb8.png?v=1776887452&width=1080">
+<div class="name">Comfort Slippers</div>
+<div class="price">Rs 1,400</div>
+</div>
+
+<!-- 14 -->
+<div class="card">
+<img src="https://www.shopelegancia.com/cdn/shop/collections/TRN_BLACK3.png?v=1754398319&width=3375">
+<div class="name">Beach Sandals</div>
+<div class="price">Rs 1,300</div>
+</div>
+
+<!-- 15 -->
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-AyWLBwsYEBjrpBaMZtp2Yuh8nuJ69J04ww&s">
+<div class="name">Soft Flip Flops</div>
+<div class="price">Rs 1,200</div>
+</div>
+
+<!-- 16 -->
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjG2bSa0JHau3B7fAmOOQub_j3utQGmANtvg&s">
+<div class="name">Leather Flats</div>
+<div class="price">Rs 2,900</div>
+</div>
+
+<!-- 17 -->
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj_gQ6Lts5GNzsMle3oHx_e2p4dhs0SRIdOA&s">
+<div class="name">Daily Wear Sandals</div>
+<div class="price">Rs 1,500</div>
+</div>
+
+<!-- 18 -->
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBXUpYrkmN-kwLViXnzqxmc0HVisB79vfwPQ&s">
+<div class="name">Comfort Chappal</div>
+<div class="price">Rs 1,700</div>
+</div>
+
+<!-- 19 -->
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWC3z2qfNvjocA-SpatcZIWa6b7bHpCWJG8Q&s">
+<div class="name">Elegant Sandals</div>
+<div class="price">Rs 3,200</div>
+</div>
+
+<!-- 20 -->
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaNQSQiKQj0BfwJbnzIpwPXXsOfLLCxQh6vg&s">
+<div class="name">Party Sandals</div>
+<div class="price">Rs 3,800</div>
+</div>
+
+<!-- 21 -->
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu8DUqYO5MOqrNKJhpRoPVkLt6AatoB-uHJQ&s">
+<div class="name">Luxury Heels</div>
+<div class="price">Rs 7,000</div>
+</div>
+
+<!-- 22 -->
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQYLVf_0GEkibOQOVjJNrXXMMaWrAK9BlO4g&s">
+<div class="name">Classic Women Shoes</div>
+<div class="price">Rs 5,900</div>
+</div>
+
+<!-- 23 -->
+<div class="card">
+<img src="https://datchi.com.pk/cdn/shop/files/Untitled-1_0063_Layer5_490x.jpg?v=1730451945">
+<div class="name">Walking Shoes</div>
+<div class="price">Rs 3,600</div>
+</div>
+
+<!-- 24 -->
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSRmwUjZRurIpWAV1H_7A-SD09QjgErRRQGA&s">
+<div class="name">Comfort Sneakers</div>
+<div class="price">Rs 3,800</div>
+</div>
+
+<!-- 25 -->
+<div class="card">
+<img src="https://www.diyaonline.com/cdn/shop/files/Black_Kussa_8f8dc7ec-6534-4cb6-ba43-7962eefb874c_1.png?v=1773411929&width=1536">
+<div class="name">Elegent Khussa</div>
+<div class="price">Rs 3,700</div>
+</div>
+
+<!-- 26 -->
+<div class="card">
+<img src="https://sensationfootwear.com/cdn/shop/files/ChatGPT_Image_Feb_12_2026_04_45_14_PM.png?v=1771304503&width=1080">
+<div class="name">Formal Ladies Shoes</div>
+<div class="price">Rs 6,400</div>
+</div>
+
+<!-- 27 -->
+<div class="card">
+<img src="https://thesassystore.shop/cdn/shop/files/1I0A2746_360x.webp?v=1771580189">
+<div class="name">Executive Heels</div>
+<div class="price">Rs 6,800</div>
+</div>
+
+<!-- 28 -->
+<div class="card">
+<img src="https://www.shopelegancia.com/cdn/shop/files/6ADFFDA6-3E14-49C4-AE2E-9359F544957D.png?v=1772386307&width=3375">
+<div class="name">Black Stylish Heels</div>
+<div class="price">Rs 5,200</div>
+</div>
+
+<!-- 29 -->
+<div class="card">
+<img src="https://www.hushpuppies.com.pk/cdn/shop/files/Slipper_black_Brown_3140c7ed-2737-4442-a76c-a3123ae4c350.jpg?v=1770196024&width=1200">
+<div class="name">Soft Daily Slippers</div>
+<div class="price">Rs 1,500</div>
+</div>
+
+<!-- 30 -->
+<div class="card">
+<img src="https://www.ndure.com/cdn/shop/files/1_7519bbad-ec7b-4f9c-989b-a205e33a938e.jpg?v=1752865535">
+<div class="name">Comfort Flat Sandals</div>
+<div class="price">Rs 1,600</div>
+</div>
+
+<!-- 31 -->
+<div class="card">
+<img src="https://sputnikfootwear.com/cdn/shop/files/3_jpg.jpg?v=1777445246&width=3840">
+<div class="name">Women EVA Chappal</div>
+<div class="price">Rs 1,100</div>
+</div>
+
+<!-- 32 -->
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ7VKQqC9kJhsPPGLdf4uyA4VddJFNSsotzw&s">
+<div class="name">Premium Sandals</div>
+<div class="price">Rs 3,000</div>
+</div>
+
+<!-- 33 -->
+<div class="card">
+<img src="https://www.shoetree.io/cdn/shop/files/ID-22J11_Pink_1_0b021f26-0d26-4b7c-8a0e-06ee22073c7e.jpg?v=1768584505&width=533">
+<div class="name">Casual Flat Shoes</div>
+<div class="price">Rs 3,200</div>
+</div>
+
+<!-- 34 -->
+<div class="card">
+<img src="https://m.media-amazon.com/images/I/51EqNouGLHL._SL500_.jpg">
+<div class="name">Soft Leather Sandals</div>
+<div class="price">Rs 2,500</div>
+</div>
+
+<!-- 35 -->
+<div class="card">
+<img src="https://unze.com.pk/cdn/shop/files/l42841.jpg?v=1776420162">
+<div class="name">Light Weight Sandals</div>
+<div class="price">Rs 1,300</div>
+</div>
+
+<!-- 36 -->
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBUHKU90HAchfweQYJkzpBfNMCUFLy8y8-9w&s">
+<div class="name">Daily Comfort Chappal</div>
+<div class="price">Rs 1,600</div>
+</div>
+
+<!-- 37 -->
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQQiVDtLUQ3lrksF3E_-aF9tOUSGeO8QakUQ&s">
+<div class="name">Premium Leather Heels</div>
+<div class="price">Rs 6,500</div>
+</div>
+
+<!-- 38 -->
+<div class="card">
+<img src="https://sputnikfootwear.com/cdn/shop/files/1_jpg.jpg?v=1777445231&width=3840">
+<div class="name">Soft Casual Slippers</div>
+<div class="price">Rs 1,400</div>
+</div>
+
+<!-- 39 -->
+<div class="card">
+<img src="https://fivo.pk/cdn/shop/files/10_1.jpg?v=1774435985&width=3840">
+<div class="name">Comfort Walking Sandals</div>
+<div class="price">Rs 1,700</div>
+</div>
+
+<!-- 40 -->
+<div class="card">
+<img src="https://walkeaze.com/cdn/shop/files/women-formal-slingback-63110s-walkeaze-5022775_963x.png?v=1771088945">
+<div class="name">Ultimate Comfort Heels</div>
+<div class="price">Rs 5,900</div>
+</div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+
+    <div class="footer-container">
+
+        <!-- COMPANY -->
+        <div>
+            <h3 class="footer-title">Company</h3>
+            <h4 class="footer-sub">What is CLIVE?</h4>
+            <p class="footer-text">
+                CLIVE is a modern footwear brand offering stylish, durable, and comfortable shoes 
+                for everyday wear. Our goal is to provide premium quality with modern fashion.
+            </p>
+        </div>
+
+        <!-- CONTACT -->
+        <div>
+            <h3 class="footer-title">Contact Us</h3>
+
+            <div class="contact-item">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-brands fa-facebook-f"></i> Facebook
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i> Email
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-brands fa-twitter"></i> Twitter
+            </div>
+
+        </div>
+
+        <!-- HELP -->
+        <div>
+            <h3 class="footer-title">Help</h3>
+            <p class="footer-text">
+                Need help? Our support team is available to assist you with orders, sizes, 
+                and any questions you may have.
+            </p>
+        </div>
+
+        <!-- CUSTOMER CARE -->
+        <div>
+            <h3 class="footer-title">Customer Care</h3>
+            <p class="footer-text">
+                Products can be returned or exchanged within 7 days of delivery. Items must be unused 
+                and returned in original packaging.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

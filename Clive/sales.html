@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIVE SALE</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+}
+
+.left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+/* MENU ICON */
+.menu{
+    cursor:pointer;
+}
+.menu div{
+    width:25px;
+    height:2px;
+    background:black;
+    margin:5px 0;
+}
+
+/* LOGO */
+.logo{
+    font-weight:bold;
+    font-size:60px;
+    color:#002147;
+}
+
+/* BAG */
+.bag{
+    width:30px;
+    height:25px;
+    border:2px solid black;
+    position:relative;
+}
+.bag::before{
+    content:'';
+    width:15px;
+    height:10px;
+    border:2px solid black;
+    border-bottom:none;
+    position:absolute;
+    top:-10px;
+    left:5px;
+    border-radius:10px 10px 0 0;
+}
+
+/* MOBILE MENU */
+.nav{
+    position:fixed;
+    top:0;
+    left:-100%;
+    width:70%;
+    height:100%;
+    background:white;
+    padding:30px;
+    transition:0.3s;
+    z-index:1000;
+}
+.nav.active{
+    left:0;
+}
+.nav a{
+    display:block;
+    margin:15px 0;
+    font-size:18px;
+    text-decoration:none;
+    color:black;
+}
+
+/* TITLE */
+.title{
+    padding:40px 60px 10px;
+    font-size:28px;
+    font-weight:bold;
+    color:#002147;
+}
+
+/* PRODUCTS */
+.products{
+    padding:20px 60px 60px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:30px;
+}
+
+/* CARD */
+.card{
+    position:relative;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.card img{
+    width:100%;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+/* SALE BADGE */
+.badge{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:black;
+    color:white;
+    padding:5px 10px;
+    font-size:12px;
+    border-radius:3px;
+}
+
+/* HOVER */
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+.card:hover img{
+    transform:scale(1.05);
+}
+
+.name{
+    margin-top:10px;
+    font-size:14px;
+}
+.price{
+    font-size:13px;
+    color:grey;
+}
+
+/* FOOTER */
+.footer{
+    padding:50px 60px;
+}
+.footer-container{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:40px;
+}
+.footer-title{
+    font-size:18px;
+}
+.footer-text{
+    font-size:13px;
+    color:grey;
+}
+.contact-item{
+    margin:10px 0;
+    color:grey;
+}
+.contact-item:hover{
+    color:black;
+}
+
+/* RESPONSIVE */
+
+/* Laptop */
+@media(max-width:1200px){
+    .grid{grid-template-columns:repeat(3,1fr);}
+}
+
+/* Tablet */
+@media(max-width:992px){
+    .grid{grid-template-columns:repeat(2,1fr);}
+    .footer-container{grid-template-columns:repeat(2,1fr);}
+    .logo{font-size:40px;}
+    .header{padding:20px 40px;}
+    .products{padding:20px 40px;}
+}
+
+/* Mobile */
+@media(max-width:600px){
+
+    .header{padding:15px 20px;}
+    .logo{font-size:28px;}
+
+    .title{
+        padding:20px;
+        font-size:22px;
+    }
+
+    .products{padding:15px 20px;}
+
+    .grid{grid-template-columns:1fr;}
+
+    .footer{
+        padding:30px 20px;
+    }
+    .footer-container{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- MOBILE NAV -->
+<div class="nav" id="nav">
+    <a href="#">Home</a>
+    <a href="#">Men</a>
+    <a href="#">Women</a>
+    <a href="#">Sale</a>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+    <div class="left">
+        <div class="menu" onclick="toggleMenu()">
+            <div></div><div></div><div></div>
+        </div>
+        <div class="logo">CLIVE</div>
+    </div>
+    <div class="bag"></div>
+</div>
+
+<!-- TITLE -->
+<div class="title">CLIVE SALE</div>
+
+<!-- PRODUCTS -->
+<div class="products">
+<div class="grid">
+
+<!-- SAMPLE PRODUCTS (same structure 30 items) -->
+<!-- Just showing few, baqi same pattern -->
+
+<div class="card">
+<div class="badge">50% OFF</div>
+<img src="https://www.tsmco.com.pk/cdn/shop/files/verticaL1_1.jpg?v=1770385461&width=800">
+<div class="name">Men Formal Shoes</div>
+<div class="price">Rs 4,500</div>
+</div>
+
+<div class="card">
+<div class="badge">50% OFF</div>
+<img src="https://starlet.pk/cdn/shop/files/p19_jpg.jpg?v=1771239146">
+<div class="name">Men Sports Shoes</div>
+<div class="price">Rs 3,800</div>
+</div>
+
+<div class="card">
+<div class="badge">50% OFF</div>
+<img src="https://efashion.com.pk/cdn/shop/files/IMG_2866.jpg?v=1775735249&width=4000">
+<div class="name">Women Khussa</div>
+<div class="price">Rs 3,500</div>
+</div>
+
+<div class="card">
+<div class="badge">50% OFF</div>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7_sKG0UhA5Hm-bo-0MsZ5QwqHIvm9t_i5ug&s">
+<div class="name">Women Sandals</div>
+<div class="price">Rs 2,800</div>
+</div>
+
+<!-- MEN FOOTWEAR (15) -->
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://footwearmenders.com/cdn/shop/files/WhatsApp_Image_2025-03-18_at_10.51.36_PM_3_-Photoroom.jpg?v=1742321033"><div class="name">Men Formal Shoes</div><div class="price">Rs 4,500</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://img.drz.lazcdn.com/static/pk/p/0320d9451d94788577eaf45c9ca2a60a.jpg_720x720q80.jpg"><div class="name">Men Sports Shoes</div><div class="price">Rs 3,800</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://img.kwcdn.com/product/fancy/fb77bedd-b79a-486d-96d0-3476cb9c1199.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp"><div class="name">Men Premium Shoes</div><div class="price">Rs 5,200</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://wewearpk.com/cdn/shop/files/IMG_0566.jpg?v=1727354911"><div class="name">Men Sneakers</div><div class="price">Rs 3,900</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://www.julke.pk/cdn/shop/files/Bowman-mens-suede-leather-moccasin-dark-cocoa-top-view-JULKE.jpg?v=1767366047&width=1500"><div class="name">Men Slippers</div><div class="price">Rs 1,500</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB77uPTAoqRltn5pFchqMM_f_pOPrKSsQXeQ&s"><div class="name">Men Sandals</div><div class="price">Rs 2,000</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT16iqQH8aNfWBRVaju3Y1xDdsH63TAwASWGA&s"><div class="name">Men Chappal</div><div class="price">Rs 1,300</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgwDP2yLmfIuOeWBjwGzENqQaraEeXW1qJow&s"><div class="name">Men Casual Shoes</div><div class="price">Rs 3,600</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://www.stylesgap.com/wp-content/uploads/2014/08/TSMCo-7.jpg"><div class="name">Men Comfort Shoes</div><div class="price">Rs 3,700</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRgYg1vgGPyaQ4aSTrUG2LvXFGbWoS5ekPmw&s"><div class="name">Men Luxury Shoes</div><div class="price">Rs 5,500</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://www.logoofficial.com/cdn/shop/articles/Top_Formal_Shoe_Trends_for_Men_in_Pakistan_2025.jpg?v=1750859010"><div class="name">Men Flip Flops</div><div class="price">Rs 1,200</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://footwearmenders.com/cdn/shop/files/WhatsAppImage2024-10-06at2.23.05PM.jpg?v=1728208079"><div class="name">Men Classic Shoes</div><div class="price">Rs 4,800</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTand66ApWLw1_a2yLvZK8vaxDEOgUioi03Cw&s"><div class="name">Men Running Shoes</div><div class="price">Rs 3,500</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/26/9610512/1.jpg?9816"><div class="name">Men Walking Sandals</div><div class="price">Rs 1,800</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://footwearmenders.com/cdn/shop/files/WhatsAppImage2023-08-29at1.59.50PM.jpg?v=1693320005"><div class="name">Men Party Shoes</div><div class="price">Rs 4,900</div></div>
+
+<!-- WOMEN FOOTWEAR (15) -->
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://admin.mochishoes.com/product/31-799/660/31-799LA24.jpg"><div class="name">Women Khussa</div><div class="price">Rs 3,500</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://sensationfootwear.com/cdn/shop/files/ChatGPT_Image_Jan_31_2026_06_39_34_PM.png?v=1770024520&width=1080"><div class="name">Women Sandals</div><div class="price">Rs 2,800</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://stylestryproductionwls47sou4z.cdn.e2enetworks.net/images/products/medium/45b5b8a16e4d652672a2b27d61977c7f04b92a82.webp"><div class="name">Women Summer Sandals</div><div class="price">Rs 2,200</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://www.julke.pk/cdn/shop/files/Zuri-women-leather-comfort-shoes-sandals-caramel-marble-straps-softsole-inside-view-JULKE.jpg?v=1700898232&width=1500"><div class="name">Women Slippers</div><div class="price">Rs 1,600</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://image.made-in-china.com/2f0j00HzrboNWJhagi/Stylish-Buckle-Casual-Shoes-for-Ladies-Fashion-Shoe-Flats-Women-Footwear-Lady-Loafers-Slip-on-Loafer.webp"><div class="name">Women Casual Shoes</div><div class="price">Rs 3,200</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://onedegree.com.pk/cdn/shop/files/002_995ac012-5f84-4698-abfd-f98c889ccb55.jpg?v=1756816639&width=640"><div class="name">Women Comfort Shoes</div><div class="price">Rs 3,600</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://hidesign.com/cdn/shop/files/8903439894801_1_64b7ce92-0a1b-41ae-8117-0c854f7c2b38.jpg?v=1756382597&width=800"><div class="name">Women Sneakers</div><div class="price">Rs 3,900</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLtvu30O6uHxtbXvdXiOuuSbI_BvTiIOZ5cA&s"><div class="name">Women Premium Shoes</div><div class="price">Rs 5,000</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://unze.com.pk/cdn/shop/files/l42924.jpg?v=1777457027"><div class="name">Women Classic Shoes</div><div class="price">Rs 4,400</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://www.metroshoes.com.pk/cdn/shop/files/10350879_02_01.jpg?v=1775222257&width=600"><div class="name">Women Flip Flops</div><div class="price">Rs 1,200</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://www.cosyfeet.com/media/wysiwyg/Category_Promo-Womens_Footwear-Short2_32.jpg"><div class="name">Women Running Shoes</div><div class="price">Rs 3,300</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://corio.pk/cdn/shop/collections/1_08c3c085-6022-4562-9de7-49bbde99fd37_300x.jpg?v=1769249116"><div class="name">Women Walking Sandals</div><div class="price">Rs 2,100</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://pumpitup.pk/cdn/shop/files/Opulence_Gold-Dipped_Slingback_PIU_268-4.webp?v=1777016717&width=1200"><div class="name">Women Chappal</div><div class="price">Rs 1,300</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://nishatlinen.com/cdn/shop/files/000440613111-_4.jpg?v=1747385413&width=2400"><div class="name">Women Chappal</div><div class="price">Rs 3,800</div></div>
+
+<div class="card"><div class="badge">50% OFF</div><img src="https://sensationfootwear.com/cdn/shop/files/1_ec620d97-ad8e-42f2-8c01-412970ef1dfe.jpg?v=1768211448&width=1080"><div class="name">Women Party Shoes</div><div class="price">Rs 4,700</div></div>
+
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <div class="footer-container">
+
+        <div>
+            <h3 class="footer-title">Company</h3>
+            <h4 class="footer-sub">What is CLIVE?</h4>
+            <p class="footer-text">
+                CLIVE is a modern footwear brand offering stylish, durable, and comfortable shoes.
+            </p>
+        </div>
+
+        <div>
+            <h3 class="footer-title">Contact Us</h3>
+            <div class="contact-item"><i class="fa-brands fa-whatsapp"></i> WhatsApp</div>
+            <div class="contact-item"><i class="fa-brands fa-facebook-f"></i> Facebook</div>
+            <div class="contact-item"><i class="fa-brands fa-instagram"></i> Instagram</div>
+            <div class="contact-item"><i class="fa-solid fa-envelope"></i> Email</div>
+            <div class="contact-item"><i class="fa-brands fa-twitter"></i> Twitter</div>
+        </div>
+
+        <div>
+            <h3 class="footer-title">Help</h3>
+            <p class="footer-text">Need help? Contact us anytime.</p>
+        </div>
+
+        <div>
+            <h3 class="footer-title">Customer Care</h3>
+            <p class="footer-text">7 days return policy available.</p>
+        </div>
+
+    </div>
+</div>
+
+<script>
+function toggleMenu(){
+    document.getElementById("nav").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

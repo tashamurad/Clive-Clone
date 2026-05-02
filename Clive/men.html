@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MEN FOOTWEAR - CLIVE</title>
+
+<!-- FONT AWESOME (REAL ICONS) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* GENERAL */
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+}
+
+.left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.menu div{
+    width:25px;
+    height:2px;
+    background:black;
+    margin:4px 0;
+}
+
+.logo{
+    font-weight:bold;
+    font-size:60px;
+    color:#002147;
+}
+
+/* BAG */
+.bag{
+    width:30px;
+    height:25px;
+    border:2px solid black;
+    position:relative;
+}
+.bag::before{
+    content:'';
+    width:15px;
+    height:10px;
+    border:2px solid black;
+    border-bottom:none;
+    position:absolute;
+    top:-10px;
+    left:5px;
+    border-radius:10px 10px 0 0;
+}
+
+/* TITLE */
+.title{
+    padding:40px 60px 10px;
+    font-size:28px;
+    font-weight:bold;
+    color:#002147;
+}
+
+/* PRODUCTS */
+.products{
+    padding:20px 60px 60px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:30px;
+}
+
+.card img{
+    width:100%;
+    border-radius:5px;
+}
+
+/* CARD STYLE */
+.card{
+    transition: all 0.3s ease;
+    cursor:pointer;
+}
+
+/* HOVER EFFECT */
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.name{
+    margin-top:10px;
+    font-size:14px;
+}
+
+.price{
+    font-size:13px;
+    color:grey;
+}
+
+/* IMAGE ZOOM */
+.card img{
+    transition: 0.3s;
+}
+
+.card:hover img{
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+.footer{
+    background:white;
+    padding:50px 60px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:40px;
+}
+
+.footer-title{
+    color:black;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.footer-sub{
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.footer-text{
+    color:grey;
+    font-size:13px;
+    line-height:1.6;
+}
+
+/* CONTACT */
+.contact-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+    color:grey;
+    font-size:14px;
+}
+
+.contact-item i{
+    font-size:18px;
+}
+
+.contact-item:hover{
+    color:black;
+    cursor:pointer;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* TABLET (max width 992px) */
+@media (max-width: 992px){
+
+    .header{
+        padding:20px 30px;
+    }
+
+    .logo{
+        font-size:40px;
+    }
+
+    .title{
+        padding:30px;
+        font-size:24px;
+    }
+
+    .products{
+        padding:20px 30px;
+    }
+
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer{
+        padding:40px 30px;
+    }
+
+    .footer-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap:30px;
+    }
+}
+
+/* MOBILE (max width 600px) */
+@media (max-width: 600px){
+
+    .header{
+        padding:15px 20px;
+    }
+
+    .logo{
+        font-size:28px;
+    }
+
+    .title{
+        padding:20px;
+        font-size:20px;
+    }
+
+    .products{
+        padding:15px 20px;
+    }
+
+    .grid{
+        grid-template-columns: 1fr;
+    }
+
+    .card{
+        text-align:center;
+    }
+
+    .footer{
+        padding:30px 20px;
+    }
+
+    .footer-container{
+        grid-template-columns: 1fr;
+        gap:25px;
+    }
+
+    .footer-title{
+        font-size:16px;
+    }
+
+    .footer-text{
+        font-size:12px;
+    }
+
+    .contact-item{
+        font-size:13px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <div class="left">
+        <div class="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="logo">CLIVE</div>
+    </div>
+    <div class="bag"></div>
+</div>
+
+<!-- TITLE -->
+<div class="title">MEN FOOTWEAR</div>
+
+<!-- PRODUCTS -->
+<div class="products">
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://www.ndure.com/cdn/shop/files/1_59167234-85c9-4ab8-926f-1aa4361c568c.jpg">
+            <div class="name">Black Sneakers</div>
+            <div class="price">Rs 5,000</div>
+        </div>
+
+        <div class="card">
+            <img src="https://www.ndure.com/cdn/shop/files/3_3bc62ef1-b9ea-43e3-aeb9-b91cf05b36ab.jpg">
+            <div class="name">Formal Leather Shoes</div>
+            <div class="price">Rs 6,500</div>
+        </div>
+
+        <div class="card">
+            <img src="https://www.ndure.com/cdn/shop/files/1_b85884f7-01af-4e57-810a-c7097bf2a15d.jpg">
+            <div class="name">Sport Running Shoes</div>
+            <div class="price">Rs 4,800</div>
+        </div>
+
+        <div class="card">
+            <img src="https://www.ndure.com/cdn/shop/files/3_7185b99c-1f57-457e-9fb0-db90e1b51daa.jpg">
+            <div class="name">Casual Sneakers</div>
+            <div class="price">Rs 3,900</div>
+        </div>
+
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgF4_8C_3T7naTU7u98_f9jy54V3HvXWQ4Zg&s">
+            <div class="name">Everyday Chappal</div>
+            <div class="price">Rs 2,000</div>
+        </div>
+
+        <div class="card">
+            <img src="https://static-01.daraz.pk/p/7bb9325001b66da22bf57afba6a532a5.jpg">
+            <div class="name">Sport Sneakers</div>
+            <div class="price">Rs 5,300</div>
+        </div>
+
+        <div class="card">
+            <img src="https://www.soloto.com/cdn/shop/files/2_9dacc4be-f37d-4d69-a49e-f6818e8283d1_800x.jpg">
+            <div class="name">Formal Black Shoes</div>
+            <div class="price">Rs 6,800</div>
+        </div>
+
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/21kFTk5XrQL._AC_.jpg">
+            <div class="name">Casual Walk Shoes</div>
+            <div class="price">Rs 3,800</div>
+        </div>
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6y72noUvH_i618cwZT1Nf2g1bYJKGcKSN4A&s" alt="">
+    <div class="name">Running Shoes Pro</div>
+    <div class="price">Rs 4,900</div>
+</div>
+
+<!-- 10 -->
+<div class="card">
+    <img src="https://www.soloto.com/cdn/shop/files/2_9dacc4be-f37d-4d69-a49e-f6818e8283d1_800x.jpg?v=1694689014" alt="">
+    <div class="name">Formal Black Shoes</div>
+    <div class="price">Rs 6,800</div>
+</div>
+
+<!-- 11 -->
+<div class="card">
+    <img src="https://images.olx.com.pk/thumbnails/610980272-400x300.jpeg" alt="">
+    <div class="name">White Trainers</div>
+    <div class="price">Rs 4,200</div>
+</div>
+
+<!-- 12 -->
+<div class="card">
+    <img src="https://static-01.daraz.pk/p/7bb9325001b66da22bf57afba6a532a5.jpg" alt="">
+    <div class="name">Sport Sneakers</div>
+    <div class="price">Rs 5,300</div>
+</div>
+
+<!-- 13 -->
+<div class="card">
+    <img src="https://m.media-amazon.com/images/I/21kFTk5XrQL._AC_.jpg" alt="">
+    <div class="name">Casual Walk Shoes</div>
+    <div class="price">Rs 3,800</div>
+</div>
+
+<!-- 14 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG39rhPc1cpzaCrrpiymZV_vXmp59iJM3HlQ&s" alt="">
+    <div class="name">Black Sneakers Lite</div>
+    <div class="price">Rs 4,100</div>
+</div>
+
+<!-- 15 -->
+<div class="card">
+    <img src="https://images-eu.ssl-images-amazon.com/images/I/61ww0nJh4iL._AC_UL600_SR600,600_.jpg" alt="">
+    <div class="name">Brown Leather Shoes</div>
+    <div class="price">Rs 6,000</div>
+</div>
+
+<!-- 16 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvHBmWkyEYtEehIocHRhCYs0PVElT6WQsORA&s" alt="">
+    <div class="name">Everyday Sneakers</div>
+    <div class="price">Rs 3,500</div>
+</div>
+
+<!-- 17 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvHBmWkyEYtEehIocHRhCYs0PVElT6WQsORA&s" alt="">
+    <div class="name">Office Formal Shoes</div>
+    <div class="price">Rs 6,300</div>
+</div>
+
+<!-- 18 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsW6ZyvGpW8S3Fk7D4k4J3PtjR7eCTm7AcJw&s" alt="">
+    <div class="name">Gym Shoes</div>
+    <div class="price">Rs 4,600</div>
+</div>
+
+<!-- 19 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSYJXWZE3K1e6pI9YDMu3T5ZHe_FC77UTdDQ&s" alt="">
+    <div class="name">Street Sneakers</div>
+    <div class="price">Rs 4,300</div>
+</div>
+
+<!-- 20 -->
+<div class="card">
+    <img src="https://images-eu.ssl-images-amazon.com/images/I/61ww0nJh4iL._AC_UL600_SR600,600_.jpg" alt="">
+    <div class="name">Comfort Shoes</div>
+    <div class="price">Rs 3,900</div>
+</div>
+
+<!-- 21 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHRcJ39WLEfPb3c3CbZhUAJe5vRliiQYDbbA&s" alt="">
+    <div class="name">Classic Leather Shoes</div>
+    <div class="price">Rs 6,700</div>
+</div>
+
+<!-- 22 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZlnNw87FSQwhkH49ee4Kb8Mo7r0oqx6_vcQ&s" alt="">
+    <div class="name">Sports Running Pro</div>
+    <div class="price">Rs 5,100</div>
+</div>
+
+<!-- 23 -->
+<div class="card">
+    <img src="https://static-01.daraz.pk/p/29b092ebfffa8c3e28170f9c193fada9.jpg" alt="">
+    <div class="name">Urban Sneakers</div>
+    <div class="price">Rs 4,400</div>
+</div>
+
+<!-- 24 -->
+<div class="card">
+    <img src="https://www.ndure.com/cdn/shop/files/3_3ff2b187-c15b-4355-a0a3-3d2e9bc89f7f.jpg?v=1759312795&width=533" alt="">
+    <div class="name">Party Formal Shoes</div>
+    <div class="price">Rs 6,900</div>
+</div>
+
+<!-- 25 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8By-rzdtD8TE30fwA1SJsVLjQAiludVdIUQ&s" alt="">
+    <div class="name">Daily Wear Shoes</div>
+    <div class="price">Rs 3,700</div>
+</div>
+
+<!-- 26 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNkpg90kQBhRZZi8jlszHE-jkxKesIGYGwbQ&s" alt="">
+    <div class="name">Premium Sneakers</div>
+    <div class="price">Rs 5,800</div>
+</div>
+
+<!-- 27 -->
+<div class="card">
+    <img src="https://www.khazanay.pk/cdn/shop/products/S01-4654_20_2_5d04cccb-794a-4f1f-9ee2-a01388377e5e.jpg?v=1587826387" alt="">
+    <div class="name">Walking Shoes</div>
+    <div class="price">Rs 3,600</div>
+</div>
+
+<!-- 28 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReNhC8Vjc6Y9EBeWr_NamR7y6ME6bqD0eYKA&s" alt="">
+    <div class="name">Luxury Leather Shoes</div>
+    <div class="price">Rs 7,200</div>
+</div>
+
+<!-- 29 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtM3gZuHkJDlEk4zJv5PETukmimhNBhQRBLA&s" alt="">
+    <div class="name">Running Flex Shoes</div>
+    <div class="price">Rs 4,900</div>
+</div>
+
+<!-- 30 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpnt9jC-bxqiHOasy4HAYwc_5TbAE8vU-1aA&s" alt="">
+    <div class="name">Casual Sneakers Pro</div>
+    <div class="price">Rs 4,200</div>
+</div>
+
+<!-- 31 -->
+<div class="card">
+    <img src="https://servis.pk/cdn/shop/files/M-DC-0200107BLACK..jpg?v=1758543719&width=533" alt="">
+    <div class="name">Formal Office Shoes</div>
+    <div class="price">Rs 6,400</div>
+</div>
+
+<!-- 32 -->
+<div class="card">
+    <img src="https://m.media-amazon.com/images/I/41PGp-A7kBL._AC_.jpg" alt="">
+    <div class="name">Sports Trainers</div>
+    <div class="price">Rs 5,000</div>
+</div>
+
+<!-- 33 -->
+<div class="card">
+    <img src="https://www.soloto.com/cdn/shop/products/3_b7f7da4a-0b3f-4994-b3dc-2e805981963a.jpg?v=1649305081" alt="">
+    <div class="name">Everyday Comfort Shoes</div>
+    <div class="price">Rs 3,800</div>
+</div>
+
+<!-- 34 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsH4GV9rN8nEjJX26EBXJi_BHremyiQmcSlw&s" alt="">
+    <div class="name">Black Street Shoes</div>
+    <div class="price">Rs 4,300</div>
+</div>
+
+<!-- 35 -->
+<div class="card">
+    <img src="https://www.ndure.com/cdn/shop/files/1_c1511797-1c27-4d62-ba44-2ff4ea476a31.jpg?v=1771401165" alt="">
+    <div class="name">Formal Premium Shoes</div>
+    <div class="price">Rs 6,800</div>
+</div>
+
+<!-- 36 -->
+<div class="card">
+    <img src="https://static-01.daraz.pk/p/86c65043cb7749bed3bc85d3328ebb22.jpg" alt="">
+    <div class="name">Running Pro Max</div>
+    <div class="price">Rs 5,400</div>
+</div>
+
+<!-- 37 -->
+<div class="card">
+    <img src="https://onedegree.com.pk/cdn/shop/files/001_0000_009593981-483-43_up_jpg_3.jpg?v=1773831684&width=640" alt="">
+    <div class="name">Light Sneakers</div>
+    <div class="price">Rs 4,100</div>
+</div>
+
+<!-- 38 -->
+<div class="card">
+    <img src="https://ae-pic-a1.aliexpress-media.com/kf/S0470a9abc21341e3b8eb23b7a2361820d.jpg" alt="">
+    <div class="name">Executive Shoes</div>
+    <div class="price">Rs 7,000</div>
+</div>
+
+<!-- 39 -->
+<div class="card">
+    <img src="https://static-01.daraz.pk/p/86c65043cb7749bed3bc85d3328ebb22.jpg" alt="">
+    <div class="name">Sport Elite Shoes</div>
+    <div class="price">Rs 5,600</div>
+</div>
+
+<!-- 40 -->
+<div class="card">
+    <img src="https://static-01.daraz.pk/p/1a82e45a5c124e262dd6720c7dcbcc2e.jpg" alt="">
+    <div class="name">Ultimate Sneakers</div>
+    <div class="price">Rs 5,200</div>
+</div>
+<!-- 1 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfPmhFthaXh42K8-jtRl6iJPtZ6Srl87738w&s" alt="">
+    <div class="name">Soft Comfort Chappal</div>
+    <div class="price">Rs 1,800</div>
+</div>
+
+<!-- 2 -->
+<div class="card">
+    <img src="https://www.calza.com.pk/cdn/shop/files/5_9dc37d5d-059b-4b58-a634-0988db93fb8f.jpg?v=1756726896" alt="">
+    <div class="name">Leather Kherri</div>
+    <div class="price">Rs 2,500</div>
+</div>
+
+<!-- 3 -->
+<div class="card">
+    <img src="https://www.calza.com.pk/cdn/shop/files/2_bcc06079-5cd4-4ec9-a8ea-b91c22dd9f48_1370x.jpg?v=1771325401" alt="">
+    <div class="name">Soft Summer Sandals</div>
+    <div class="price">Rs 1,600</div>
+</div>
+
+<!-- 4 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlIp0WoIZ7WByACvved1iKbUfq7jIJGscGaQ&s" alt="">
+    <div class="name">Men Casual Chappal</div>
+    <div class="price">Rs 1,900</div>
+</div>
+
+<!-- 5 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcRu4FC_R5m1LDz_v8kVPa2uARqERnaUiO9w&s" alt="">
+    <div class="name">Brown Soft Kherri</div>
+    <div class="price">Rs 2,700</div>
+</div>
+
+<!-- 6 -->
+<div class="card">
+    <img src="https://chasevalue.pk/cdn/shop/products/191461.jpg?v=1602241472" alt="">
+    <div class="name">Daily Wear Chappal</div>
+    <div class="price">Rs 1,500</div>
+</div>
+
+<!-- 7 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZnzcXVW-z8edGhjxfQZGwoydylYW2wuaNvg&s" alt="">
+    <div class="name">Soft EVA Sandals</div>
+    <div class="price">Rs 1,300</div>
+</div>
+
+<!-- 8 -->
+<div class="card">
+    <img src="https://img.drz.lazcdn.com/static/pk/p/2fc1d52d19d99b9faf65d71eeb21d76d.jpg_720x720q80.jpg" alt="">
+    <div class="name">Comfort Walking Chappal</div>
+    <div class="price">Rs 1,700</div>
+</div>
+
+<!-- 9 -->
+<div class="card">
+    <img src="https://media.naheed.pk/catalog/product/cache/2f2d0cb0c5f92580479e8350be94f387/1/1/1196242-1.jpg" alt="">
+    <div class="name">Beach Soft Sandals</div>
+    <div class="price">Rs 1,200</div>
+</div>
+
+<!-- 10 -->
+<div class="card">
+    <img src="https://www.hushpuppies.com.pk/cdn/shop/files/1_4abc605f-5f1d-42e8-9277-0f796ad0f5cf.jpg?v=1770050191&width=1200" alt="">
+    <div class="name">Leather Formal Kherri</div>
+    <div class="price">Rs 2,900</div>
+</div>
+
+<!-- 11 -->
+<div class="card">
+    <img src="https://yescart.pk/cdn/shop/products/a927516a44c81c1cc7241f0d9cf9655c_jpg_750x400_jpg.webp?v=1708896689" alt="">
+    <div class="name">Soft Rubber Chappal</div>
+    <div class="price">Rs 1,400</div>
+</div>
+
+<!-- 12 -->
+<div class="card">
+    <img src="https://media.naheed.pk/catalog/product/cache/2f2d0cb0c5f92580479e8350be94f387/1/2/1298344-1.jpg" alt="">
+    <div class="name">Classic slippers</div>
+    <div class="price">Rs 2,600</div>
+</div>
+
+<!-- 13 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvsuQGXEsvzZMte5GH31woONQzoHlc7OO9uA&s" alt="">
+    <div class="name">Light Weight Sandals</div>
+    <div class="price">Rs 1,300</div>
+</div>
+
+<!-- 14 -->
+<div class="card">
+    <img src="https://www.hushpuppies.com.pk/cdn/shop/files/1_fc27afe3-d235-4332-8c6f-406630b455dd.jpg?v=1770097373&width=1200" alt="">
+    <div class="name">Daily Comfort Chappal</div>
+    <div class="price">Rs 1,600</div>
+</div>
+
+<!-- 15 -->
+<div class="card">
+    <img src="https://www.borjan.com.pk/cdn/shop/files/2_c6689472-41f5-4e0b-b07c-1253073694c4.jpg?v=1776839654&width=533" alt="">
+    <div class="name">Premium Soft Sandals</div>
+    <div class="price">Rs 3,000</div>
+</div>
+
+<!-- 16 -->
+<div class="card">
+    <img src="https://www.borjan.com.pk/cdn/shop/files/2_d89afbc3-c7fa-4062-a539-24705dba55ab.png?v=1776142126&width=533" alt="">
+    <div class="name">Men EVA Chappal</div>
+    <div class="price">Rs 1,100</div>
+</div>
+
+<!-- 17 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTziclX8I9JD0-09bTkKZtO1E37W8wvmCrpHQ&s" alt="">
+    <div class="name">Soft Formal Sandals</div>
+    <div class="price">Rs 2,200</div>
+</div>
+
+<!-- 18 -->
+<div class="card">
+    <img src="https://starlet.pk/cdn/shop/files/0004_CXG-0001NVB_4.jpg?v=1773641758&width=1500" alt="">
+    <div class="name">Summer Light Chappal</div>
+    <div class="price">Rs 1,500</div>
+</div>
+
+<!-- 19 -->
+<div class="card">
+    <img src="https://starlet.pk/cdn/shop/files/0025_LEX-002OLV_2.jpg?v=1773642537&width=1500" alt="">
+    <div class="name">Soft Rubber Sandals</div>
+    <div class="price">Rs 1,300</div>
+</div>
+
+<!-- 20 -->
+<div class="card">
+    <img src="https://cdn.shopify.com/s/files/1/0316/8249/4604/files/30200752_01_01.jpg?v=1775029376&width=600" alt="">
+    <div class="name">Classic Comfort Chappal</div>
+    <div class="price">Rs 2,800</div>
+</div>
+
+<!-- 21 -->
+<div class="card">
+    <img src="https://www.borjan.com.pk/cdn/shop/files/1_722071b4-4943-4de1-a48e-4a38c924db3e.png?v=1776142126&width=533" alt="">
+    <div class="name">Soft Walking Chappal</div>
+    <div class="price">Rs 1,600</div>
+</div>
+
+<!-- 22 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVfIUHOuI0-OiIv5Xgz-KhRu2kGiIVKdqfCw&s" alt="">
+    <div class="name">Leather Soft Chappal</div>
+    <div class="price">Rs 2,700</div>
+</div>
+
+<!-- 23 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVEAhcgAJKQnTdTp6e7a1LWGsCNBfgBCwNSg&s" alt="">
+    <div class="name">Men Light Sandals</div>
+    <div class="price">Rs 1,400</div>
+</div>
+
+<!-- 24 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmcPeNFL3KocyaiWuWM3GgITwdKVHMg1NoGA&s" alt="">
+    <div class="name">Comfort EVA Chappal</div>
+    <div class="price">Rs 1,200</div>
+</div>
+
+<!-- 25 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZMSjcH3mLKaJpy5l8tyM8_TcjZ7mp-_gvPw&s" alt="">
+    <div class="name">Premium chappal Black</div>
+    <div class="price">Rs 3,100</div>
+</div>
+
+<!-- 26 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_k-uLQXvQO9Poa1q7Dcxu1b552vOzkeaKzQ&s" alt="">
+    <div class="name">Soft Daily Chappal</div>
+    <div class="price">Rs 1,500</div>
+</div>
+
+<!-- 27 -->
+<div class="card">
+    <img src="https://www.borjan.com.pk/cdn/shop/files/2_2567c3fa-e7ce-4674-a98f-075cbe4107a3.png?v=1776341981&width=533" alt="">
+    <div class="name">Men Casual Sandals</div>
+    <div class="price">Rs 1,700</div>
+</div>
+
+<!-- 28 -->
+<div class="card">
+    <img src="https://kover.pk/cdn/shop/files/BLACK1SLIPPERWITHTHICKSOLE.jpg?v=1704299838" alt="">
+    <div class="name">Soft Beach Chappal</div>
+    <div class="price">Rs 1,200</div>
+</div>
+
+<!-- 29 -->
+<div class="card">
+    <img src="https://cdn.shopify.com/s/files/1/0316/8249/4604/files/30200750_01_01.jpg?v=1773048458&width=600" alt="">
+    <div class="name">Light Comfort Sandals</div>
+    <div class="price">Rs 1,300</div>
+</div>
+
+<!-- 30 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0WhL_Q_UfHtqsvudrgI8lVaerx1OaTee9cg&s" alt="">
+    <div class="name">Formal Soft Kherri</div>
+    <div class="price">Rs 2,900</div>
+</div>
+
+<!-- 31 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7U5FgVF-Ehbznabmn9S6ZTCgn4pWtCz8xtg&s" alt="">
+    <div class="name">Men Rubber Chappal</div>
+    <div class="price">Rs 1,100</div>
+</div>
+
+<!-- 32 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsPwCS60uhQYSSp2rQcPXD1tRWFgsURQ_qDg&s" alt="">
+    <div class="name">Soft Leather Sandals</div>
+    <div class="price">Rs 2,500</div>
+</div>
+
+<!-- 33 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyjp0M05IieB9A6GWW2GYULzomXixjmtEuUg&s" alt="">
+    <div class="name">Comfort Summer Chappal</div>
+    <div class="price">Rs 1,600</div>
+</div>
+
+<!-- 34 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGMvINpNMHbDi5Sb0wO_wpX_gy6Ya0G4K8pw&s" alt="">
+    <div class="name">Soft Daily Softie</div>
+    <div class="price">Rs 1,400</div>
+</div>
+
+<!-- 35 -->
+<div class="card">
+    <img src="https://m.media-amazon.com/images/I/41OzjkIW2CL.jpg" alt="">
+    <div class="name">Premium Leather Shoes</div>
+    <div class="price">Rs 3,200</div>
+</div>
+
+<!-- 36 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQisX1k7_F0_bnpwLlJf577FRX4D485aiOQLQ&s" alt="">
+    <div class="name">Soft Men Chappal</div>
+    <div class="price">Rs 1,500</div>
+</div>
+
+<!-- 37 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj6PBhXD1U-xH3s0dcD60sqfvPMsELKfr8yw&s" alt="">
+    <div class="name">Comfort Leather Sandals</div>
+    <div class="price">Rs 2,600</div>
+</div>
+
+<!-- 38 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8ljIBIsrMa2ka0J99l845zOVJ6O2aXmNfmg&s" alt="">
+    <div class="name">Light Soft Chappal</div>
+    <div class="price">Rs 1,300</div>
+</div>
+
+<!-- 39 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWMp1irZY7LSLM2cVzJMoVN3xRTxH3tvE27Q&s" alt="">
+    <div class="name">Men EVA Soft Sandals</div>
+    <div class="price">Rs 1,200</div>
+</div>
+
+<!-- 40 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWFdwQV3ySjIXvEVVwyST89mWCpL35L_SQLA&s" alt="">
+    <div class="name">Ultimate Comfort Chappal</div>
+    <div class="price">Rs 3,000</div>
+</div>
+    </div>
+
+</div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+
+    <div class="footer-container">
+
+        <!-- COMPANY -->
+        <div>
+            <h3 class="footer-title">Company</h3>
+            <h4 class="footer-sub">What is CLIVE?</h4>
+            <p class="footer-text">
+                CLIVE is a modern footwear brand offering stylish, durable, and comfortable shoes 
+                for everyday wear. Our goal is to provide premium quality with modern fashion.
+            </p>
+        </div>
+
+        <!-- CONTACT -->
+        <div>
+            <h3 class="footer-title">Contact Us</h3>
+
+            <div class="contact-item">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-brands fa-facebook-f"></i> Facebook
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i> Email
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-brands fa-twitter"></i> Twitter
+            </div>
+
+        </div>
+
+        <!-- HELP -->
+        <div>
+            <h3 class="footer-title">Help</h3>
+            <p class="footer-text">
+                Need help? Our support team is available to assist you with orders, sizes, 
+                and any questions you may have.
+            </p>
+        </div>
+
+        <!-- CUSTOMER CARE -->
+        <div>
+            <h3 class="footer-title">Customer Care</h3>
+            <p class="footer-text">
+                Products can be returned or exchanged within 7 days of delivery. Items must be unused 
+                and returned in original packaging.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
